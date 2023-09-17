@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <!--使用MDUI-->
+  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  <!-- 引入Bootstrap的CSS库 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 引入Bootstrap的JavaScript库 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/gh/ymh0000123/Genshin-Impact-Good-words-and-sentences@main/script.js"
+    charset="utf-8"></script>
+  <style>
+    body {
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!--导航栏-->
+  <div class="mdui-appbar" mdui-appbar-fixed>
+    <div class="mdui-toolbar mdui-color-indigo">
+      <a class="mdui-btn mdui-btn-icon" id="toggle">
+        <i class="mdui-icon material-icons">menu</i>
+      </a>
+      <a href="#" class="mdui-typo-headline">文件列表</a>
+      <div class="mdui-toolbar-spacer"></div>
+      <div class="mdui-typo-title" id="ys">欲买桂花同载酒...只可惜故人，何日再见呢?</div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<body class="mdui-drawer-body " style="padding-top: 20px;">
+  <div class="mdui-drawer mdui-drawer-close" id="drawer">
+    <ul class="mdui-list">
+      <div class="mdui-card-header">
+        <img class="mdui-card-header-avatar" src="1.png" />
+        <div class="mdui-card-header-title">没用的小废鼠</div>
+        <div class="mdui-card-header-subtitle">awa</div>
+      </div>
+      <li class="mdui-subheader"><i class="mdui-icon material-icons">link</i>更多</li>
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">list</i>
+        <a class="mdui-list-item-content"  href="https://ymh0000123.github.io/">主页</a>
+      </li>
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">assignment</i>
+        <a class="mdui-list-item-content"  href="https://xiaofeishu-boke.netlify.app/">blog</a>
+      </li>
+  </div>
+</body>
+<bady>
+  <div class="mdui-col-md-7 mdui-col-offset-md-3">
+    <div class="card">
+      <div class="card-header">
+        <div class="mdui-typo-display-1"><i class="mdui-icon material-icons">view_list</i>文件列表</div>
+      </div>
+      <div class="mdui-table-fluid">
+        <div class="card-body">
+          <table class="mdui-table mdui-table-hoverable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>链接(点击跳转)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>XPMSL</td>
+                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
+                    href="https://ymh0000123.github.io/XPMSL/zh-cn/historicalversion.html">[GitHub]下载</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>凌云肆一周目生存存档（服务端版不含插件）</td>
+                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
+                  href="https://pan.1l1.icu/s/qVdUq">[XM's Cloudreve]下载</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>mc</td>
+                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
+                    href="https://pan.1l1.icu/s/xxphD">[XM's Cloudreve]下载</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var $ = mdui.$;
+    var inst = new mdui.Drawer('#drawer');
+
+    // method
+
+    $('#toggle').on('click', function () {
+      inst.toggle();
+    });
+
+  </script>
+
+</bady>
+
+</html>
