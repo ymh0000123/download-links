@@ -1,130 +1,120 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>文件下载</title>
-  <link rel="shortcut icon" type="image/ico" href="https://mecdn.mcserverx.com/gh/ymh0000123/download-links/main/1.png">
-  <!--使用MDUI-->
-  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-  <script src="https://unpkg.com/genshin-good-words"
-    charset="utf-8"></script>
-  <style>
-    body {
-      font-weight: 500;
-    }
-
-    /* 为导航栏添加上边距 */
-    .mdui-appbar {
-      margin-bottom: 20px;
-      /* 添加适当的上边距，根据需要进行调整 */
-    }
-
-    /* 为卡片添加上边距 */
-    .card {
-      margin-top: 20px;
-      /* 添加适当的上边距，根据需要进行调整 */
-    }
-  </style>
-</head>
-
-<body>
-  <!--导航栏-->
-  <div class="mdui-appbar" mdui-appbar-fixed>
-    <div class="mdui-toolbar mdui-color-indigo">
-      <a class="mdui-btn mdui-btn-icon" id="toggle">
-        <i class="mdui-icon material-icons">menu</i>
-      </a>
-      <a href="#" class="mdui-typo-headline">文件列表</a>
-      <div class="mdui-toolbar-spacer"></div>
-      <div class="mdui-typo-title" id="ys">欲买桂花同载酒...只可惜故人，何日再见呢?</div>
-    </div>
-  </div>
-</body>
-
-<body class="mdui-drawer-body " style="padding-top: 20px;">
-  <div class="mdui-drawer mdui-drawer-close" id="drawer">
-    <ul class="mdui-list">
-      <div class="mdui-card-header">
-        <img class="mdui-card-header-avatar"
-          src="https://mecdn.mcserverx.com/gh/ymh0000123/download-links/main/1.png" />
-        <div class="mdui-card-header-title">没用的小废鼠</div>
-        <div class="mdui-card-header-subtitle">awa</div>
-      </div>
-      <li class="mdui-subheader"><i class="mdui-icon material-icons">link</i>更多</li>
-      <li class="mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons">list</i>
-        <a class="mdui-list-item-content" href="https://ymh0000123.github.io/">主页</a>
-      </li>
-      <li class="mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons">assignment</i>
-        <a class="mdui-list-item-content" href="https://xiaofeishu-boke.netlify.app/">blog</a>
-      </li>
-  </div>
-</body>
-<body>
-  <div class="mdui-col-md-7 mdui-col-offset-md-3">
-    <div class="card">
-      <div class="card-header">
-        <div class="mdui-typo-display-1"><i class="mdui-icon material-icons">view_list</i>文件列表</div>
-      </div>
-      <div class="mdui-table-fluid">
-        <div class="card-body">
-          <table class="mdui-table mdui-table-hoverable">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>名称</th>
-                <th>链接(点击跳转)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>XPMSL</td>
-                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
-                    href="https://ymh0000123.github.io/XPMSL/zh-cn/historicalversion.html">[GitHub]下载</a></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>凌云肆一周目生存存档（服务端版不含插件）</td>
-                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
-                    href="https://pan.1l1.icu/s/qVdUq">[XM's Cloudreve]下载</a></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>mc</td>
-                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
-                    href="https://pan.1l1.icu/s/xxphD">[XM's Cloudreve]下载</a>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>网页mc</td>
-                <td><a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-teal"
-                    href="https://pan.karpov.cn/s/yatx">[川意网盘]下载</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .card {
+        width: 80%;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 75%;
+      }
+      .card-dhl {
+        width: 80%;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        max-width: 75%;
+        justify-content: space-around
+      }
+      .file-number {
+        font-weight: bold;
+      }
+      .file-name {
+        margin: 0 10px;
+        font-weight: bold;
+      }
+      .download-btn {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+      }
+      .download-btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="card-dhl">
+            <a href="ymh0000123.github.io" class="download-btn">网站</a>
+            <a href="https://xiaofeishu-boke.netlify.app/" class="download-btn">blog</a>
         </div>
-      </div>
     </div>
-  </div>
-  <script>
-    var $ = mdui.$;
-    var inst = new mdui.Drawer('#drawer');
+    <h1>下载列表</h1>
+    <div class="container">
+        <div class="card-dhl" id="ys">
+            欲买桂花同载酒...只可惜故人，何日再见呢?
+        </div>
+    </div>
+    <div class="container" id="downloadList"></div>
+    <div class="container" id="totalFiles"></div>
 
-    // method
+    <script>
+      fetch("list.md")
+        .then((response) => response.text())
+        .then((markdownContent) => {
+          const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+          let match;
+          let listContent = "";
+          let fileId = 1; // 计数器
 
-    $('#toggle').on('click', function () {
-      inst.toggle();
-    });
+          while ((match = regex.exec(markdownContent)) !== null) {
+            const fileName = match[1];
+            const downloadLink = match[2];
+            listContent += `
+                    <div class="card">
+                        <span class="file-number">${fileId}.</span>
+                        <span class="file-name">${fileName}</span>
+                        <a href="${downloadLink}" class="download-btn" download>下载</a>
+                    </div>
+                `;
+            fileId++; // 每次循环递增计数器
+          }
 
-  </script>
+          document.getElementById("downloadList").innerHTML = listContent;
 
-</body>
-
+          // 显示总文件数
+          const totalFiles = fileId - 1; // 最后 fileId 会比实际文件数多 1
+          const totalFilesCard = `
+                <div class="card">
+                    <span class="file-number">总文件数:</span>
+                    <span class="file-name">${totalFiles}</span>
+                </div>
+            `;
+          document.getElementById("totalFiles").innerHTML = totalFilesCard;
+        })
+        .catch((error) => console.error("Error fetching list.md:", error));
+    </script>
+      <script src="https://unpkg.com/genshin-good-words"
+      charset="utf-8"></script>
+  </body>
 </html>
